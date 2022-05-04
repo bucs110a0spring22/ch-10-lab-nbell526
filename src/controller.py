@@ -7,6 +7,7 @@ from src import enemy
 
 class Controller:
     def __init__(self, width=640, height=480):
+        '''Initializes data for the controller'''
         pygame.init()
         self.width = width
         self.height = height
@@ -15,7 +16,7 @@ class Controller:
         self.background.fill((250, 250, 250))  # set the background to white
         pygame.font.init()  # you have to call this at the start, if you want to use this module.
         pygame.key.set_repeat(1, 50)  # initialize a held keey to act as repeated key strikes
-        """Load the sprites that we need"""
+        '''Load the sprites that we need'''
 
         self.enemies = pygame.sprite.Group()
         num_enemies = 3
@@ -28,6 +29,7 @@ class Controller:
         self.state = "GAME"
 
     def mainLoop(self):
+        '''Used to see whether the game is ongoing or over'''
         while True:
             if(self.state == "GAME"):
                 self.gameLoop()
@@ -35,6 +37,7 @@ class Controller:
                 self.gameOver()
 
     def gameLoop(self):
+        '''Code for the main part of the game'''
         while self.state == "GAME":
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -62,6 +65,8 @@ class Controller:
 
             # redraw the entire screen
             self.enemies.update()
+            if not self.enemies.update:
+              self.enemies.kill()
             self.screen.blit(self.background, (0, 0))
             if(self.hero.health == 0):
                 self.state = "GAMEOVER"
@@ -71,6 +76,7 @@ class Controller:
             pygame.display.flip()
 
     def gameOver(self):
+        '''Prints out the game over message on the screen when the hero loses all of his health'''
         self.hero.kill()
         myfont = pygame.font.SysFont(None, 30)
         message = myfont.render('Game Over', False, (0, 0, 0))

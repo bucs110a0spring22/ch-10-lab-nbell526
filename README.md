@@ -8,20 +8,20 @@
 Replace anything surrounded by the `< >` symbols._
 
 ## SUMMARY:
- < Provide a short description of your program's functionality. No more than a couple sentences. >
+This code is a game with a hero and three enemies. The hero fights the enemies until health reaches zero. At that point, the game is over.
 #### Unique Feature
- < Describe the unique feature you added >
+Program makes it so that enemiers will on move in certain are now. If not in area, they stand still.
 
 ## GRACE DAYS
-Grace days used for this assignment: < # >
+Grace days used for this assignment: < 1 >
 
-Grace days remaining: < # >/5
+Grace days remaining: < 0 >/5
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
- < What parts of the project you were not able to complete >
+none
 
 ## REFERENCES:
- < List any outside resources used >
+links from class website 
 
 ## MISCELLANEOUS COMMENTS:
- < Anything you would like the grader to know >
+smartpop has been getting me through the semester at this point 

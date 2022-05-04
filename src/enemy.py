@@ -1,8 +1,11 @@
 import pygame
 import random
+from src import hero
+
 #model
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, name, x, y, img_file):
+        '''Initializes data for enemy class'''
         #initialize all the Sprite functionality
         pygame.sprite.Sprite.__init__(self)
 
@@ -21,4 +24,9 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 2
 
     def update(self):
-        print("'Update me,' says " + self.name)
+        '''Makes the enemies move if they are within a certain part of the screen'''
+        if self.rect.x > 200 and self.rect.y > 100 and self.rect.y < 250:
+          self.rect.x += random.randint(-1,1)
+          self.rect.y += random.randint(-1,1)
+          return True
+          #print("'Update me,' says " + self.name)
