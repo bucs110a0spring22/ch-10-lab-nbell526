@@ -1,4 +1,4 @@
-# CS 110
+d# CS 110
 ## Chapter 11 - Lab - Working with Pygame
 
 
@@ -10,8 +10,7 @@ Replace anything surrounded by the `< >` symbols._
 ## SUMMARY:
 This code is a game with a hero and three enemies. The hero fights the enemies until health reaches zero. At that point, the game is over.
 #### Unique Feature
-Program makes it so that enemiers will on move in certain are now. If not in area, they stand still.
-
+Program makes it so that hero fatigues by half of his speed. Making it more and more likely for the game to end as time goes on.
 ## GRACE DAYS
 Grace days used for this assignment: < 1 >
 
@@ -24,4 +23,4 @@ none
 links from class website 
 
 ## MISCELLANEOUS COMMENTS:
-smartpop has been getting me through the semester at this point 
+smartpop has been getting me through the semester at this point. i need some streetfair kettlecorn...
